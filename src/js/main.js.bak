@@ -4,7 +4,6 @@ setTimeout(function() {
     "use strict";
 
     game.state.add('boot', MouseGame.Boot, true);
-    game.state.add('langselector', MouseGame.LangSelector);
     game.state.add('preloader', MouseGame.Preloader);
     game.state.add('mainmenu', MouseGame.MainMenu);
     game.state.add('game', MouseGame.Game);

@@ -1,8 +1,6 @@
 MouseGame.Boot = function () {
-
+    language = "en";
 };
-
-var load;
 
 MouseGame.Boot.prototype = {
 
@@ -11,7 +9,7 @@ MouseGame.Boot.prototype = {
 
         this.load.image('preloaderBar', 'assets/preloader.png');
         this.load.image('preloaderBarBg', 'assets/preloader-bg.png');
-        game.load.image('preloader-background','assets/backgrounds/cleared_text_backgrounds/preloader.jpg');
+        this.game.load.image('preloader-background', 'assets/backgrounds/cleared_text_backgrounds/preloader.jpg');
     },
 
     create: function () {
@@ -52,9 +50,7 @@ MouseGame.Boot.prototype = {
 
         //  By this point the preloader assets have loaded to the cache, we've set the game settings
         //  So now let's start the real preloader going
-        this.game.state.start('preloader');
-
-        load = game.add.text(loadX, loadY, load, loadStyle);
+        this.game.state.start('langselector');
 
     }
 
